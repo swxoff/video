@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepWeb Archive</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            margin-top: 20%;
+        }
+        a {
+            color: red;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>DEEPWEB ARCHIVE</h1>
+    <p>Bienvenue dans les archives interdites.</p>
+    <p>Accès restreint. Mot de passe requis.</p>
+    <p><a href="/key">Accéder à la clé</a></p>
+    <p class="hidden" id="warning">ATTENTION : Ils te surveillent.</p>
+
+    <script>
+        // Afficher un message caché après 5 secondes
+        setTimeout(() => {
+            document.getElementById('warning').style.display = 'block';
+        }, 5000);
+    </script>
+</body>
+</html>
