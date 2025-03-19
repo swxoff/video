@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepWeb Archive - Cleaner</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            margin-top: 20%;
+        }
+        a {
+            color: red;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>NETTOYAGE DU SYSTÈME</h1>
+    <p>Télécharge ce programme pour effacer toutes les traces de ton activité.</p>
+    <p><a href="/cleaner.exe" download>Télécharger Cleaner.exe</a></p>
+    <p class="hidden" id="warning">ATTENTION : Ce fichier pourrait contenir des logiciels malveillants.</p>
+
+    <script>
+        // Afficher un message d'avertissement après 3 secondes
+        setTimeout(() => {
+            document.getElementById('warning').style.display = 'block';
+        }, 3000);
+    </script>
+</body>
+</html>
