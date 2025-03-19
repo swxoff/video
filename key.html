@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepWeb Archive - Key</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            margin-top: 20%;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            font-family: 'Courier New', monospace;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>ACCÈS À LA CLÉ</h1>
+    <p>Pour accéder à la clé, résous cette énigme :</p>
+    <p>"Je suis toujours devant toi, mais tu ne peux jamais me toucher. Je suis invisible, mais je te guide. Qui suis-je ?"</p>
+    <input type="text" id="answer" placeholder="Ta réponse">
+    <button onclick="checkAnswer()">Valider</button>
+    <p class="hidden" id="error">Réponse incorrecte. Essaie encore.</p>
+    <p class="hidden" id="success">Bonne réponse ! Télécharge la clé : <a href="/key.zip" download>Télécharger</a></p>
+
+    <script>
+        function checkAnswer() {
+            const answer = document.getElementById('answer').value.toLowerCase();
+            if (answer === "l'avenir" || answer === "avenir") {
+                document.getElementById('success').style.display = 'block';
+                document.getElementById('error').style.display = 'none';
+            } else {
+                document.getElementById('error').style.display = 'block';
+                document.getElementById('success').style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
